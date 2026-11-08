@@ -1,7 +1,13 @@
-import { Footerdemo } from '@/components/ui/footer-section';
+import DitheredFooter from "@/components/ui/dithered-footer";
 
 export default function LandingFooter() {
-  return <Footerdemo />;
+  return (
+    <DitheredFooter
+      brand="CAMPUSCODE"
+      tagline="Where student builders learn, compete & ship."
+      accent="#7665FF"
+    />
+  );
 }
 
-export { Footerdemo as Footer };
+export { DitheredFooter as Footer, DitheredFooter as Footerdemo };

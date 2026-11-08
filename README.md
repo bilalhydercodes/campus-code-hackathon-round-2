@@ -123,8 +123,8 @@ campuscode-rebuild26/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/bilalhydercodes/campus-code-hackathon-2.git
-   cd campus-code-hackathon-2
+   git clone https://github.com/bilalhydercodes/campus-code-hackathon.git
+   cd campus-code-hackathon
    ```
 
 2. **Install dependencies:**

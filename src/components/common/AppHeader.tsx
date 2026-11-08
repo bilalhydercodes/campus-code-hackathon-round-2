@@ -46,7 +46,7 @@ export function AppHeader({ navItems = defaultNav, action }: AppHeaderProps) {
         </Link>
 
         {/* Center: Mathematically Centered Navigation Pill */}
-        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-1 rounded-full border border-[#E5E5E0] bg-[#F2F2EE]/70 px-2 py-1.5 shadow-[0_2px_8px_rgba(0,0,0,0.03)] backdrop-blur-sm z-0">
+        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-1.5 rounded-full border border-[#E5E5DF] bg-[#F3F3F1]/95 p-1.5 shadow-[0_2px_10px_rgba(0,0,0,0.03)] backdrop-blur-md z-0">
           {navItems.map((item, idx) => {
             const isActive =
               location.pathname === item.href ||
@@ -56,10 +56,10 @@ export function AppHeader({ navItems = defaultNav, action }: AppHeaderProps) {
               <a
                 key={idx}
                 href={item.href}
-                className={`rounded-full px-4 py-1.5 font-inter text-[13.5px] font-medium transition-all ${
+                className={`rounded-full px-5 py-2 font-inter text-[14px] font-medium leading-tight transition-all duration-150 select-none ${
                   isActive
-                    ? "bg-white text-[#111111] shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
-                    : "text-[#555550] hover:text-[#111111] hover:bg-white/50"
+                    ? "bg-white text-[#111111] shadow-[0_1px_3px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                    : "text-[#555550] hover:text-[#111111]"
                 }`}
               >
                 {item.title}

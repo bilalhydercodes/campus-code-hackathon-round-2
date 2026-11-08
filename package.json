@@ -1,14 +1,14 @@
 {
-  "name": "campus-code-hackathon-2",
+  "name": "campus-code-hackathon",
   "private": true,
   "version": "1.0.0",
   "description": "CampusCode - Production-grade Mobile-First Hackathon Arena Platform Rebuild",
   "author": "Mahammad Bilal Hyder <bilalhyder889@gmail.com> (https://github.com/bilalhydercodes)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bilalhydercodes/campus-code-hackathon-2.git"
+    "url": "https://github.com/bilalhydercodes/campus-code-hackathon.git"
   },
-  "homepage": "https://github.com/bilalhydercodes/campus-code-hackathon-2#readme",
+  "homepage": "https://github.com/bilalhydercodes/campus-code-hackathon#readme",
   "type": "module",
   "scripts": {
     "dev": "vite",
