@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { List } from "phosphor-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { getAssetUrl } from "@/lib/utils";
 
 export interface NavItem {
   title: string;
@@ -39,7 +40,7 @@ export function AppHeader({ navItems = defaultNav, action }: AppHeaderProps) {
         {/* Left: Official Logo */}
         <Link to="/" className="flex items-center z-10 shrink-0">
           <img
-            src="/campuscode-logo.png"
+            src={getAssetUrl('campuscode-logo.png')}
             alt="CampusCode"
             className="h-8 w-auto object-contain object-left"
           />

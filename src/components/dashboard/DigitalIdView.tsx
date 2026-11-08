@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { LanyardCard } from '../ui/lanyard-card';
 import { Download, Share2, Check } from 'lucide-react';
+import { getAssetUrl } from '@/lib/utils';
 
 interface DigitalIdViewProps {
   className?: string;
@@ -17,7 +18,7 @@ export default function DigitalIdView({
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/assets/lanyard-digital-id.png';
+    link.href = getAssetUrl('assets/lanyard-digital-id.png');
     link.download = 'CampusCode-Digital-Pass.png';
     document.body.appendChild(link);
     link.click();

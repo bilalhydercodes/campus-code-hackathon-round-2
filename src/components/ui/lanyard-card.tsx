@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { cn, getAssetUrl } from "@/lib/utils";
 
 export interface LanyardCardProps extends React.HTMLAttributes<HTMLDivElement> {
   onOpenPlaybook?: () => void;
@@ -73,7 +73,7 @@ export function LanyardCard({
           {/* Transparent 2D Graphic Illustration with natural silhouette drop shadow */}
           <div className="relative w-[290px] xs:w-[320px] sm:w-[360px] md:w-[390px] drop-shadow-[0_20px_35px_rgba(0,0,0,0.18)] transition-all duration-300 group-hover:drop-shadow-[0_26px_45px_rgba(0,0,0,0.28)]">
             <img
-              src="/assets/lanyard-digital-id.png"
+              src={getAssetUrl('assets/lanyard-digital-id.png')}
               alt="CampusCode Lanyard Digital ID - Google Builder"
               className="w-full h-auto block select-none pointer-events-none"
               draggable={false}

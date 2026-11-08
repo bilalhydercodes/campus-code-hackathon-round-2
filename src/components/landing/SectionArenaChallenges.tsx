@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import TiltedGridHero, { TiltedGridImage } from './TiltedGridHero';
+import { getAssetUrl } from '@/lib/utils';
 
 const activeChallengeImages: TiltedGridImage[] = [
-  { src: '/slides/slide-1.png', alt: 'Building India Case Study Competition' },
-  { src: '/slides/slide-2.png', alt: 'Seva First Innovation Challenge 2026' },
-  { src: '/slides/slide-3.png', alt: 'Rajasthan Royals SuperRR Selector Winners' },
-  { src: '/slides/slide-4.png', alt: 'Rajasthan Royals SuperRR Selector Season 2' },
-  { src: '/slides/slide-5.png', alt: 'Asian Paints Alchemy' },
+  { src: getAssetUrl('slides/slide-1.png'), alt: 'Building India Case Study Competition' },
+  { src: getAssetUrl('slides/slide-2.png'), alt: 'Seva First Innovation Challenge 2026' },
+  { src: getAssetUrl('slides/slide-3.png'), alt: 'Rajasthan Royals SuperRR Selector Winners' },
+  { src: getAssetUrl('slides/slide-4.png'), alt: 'Rajasthan Royals SuperRR Selector Season 2' },
+  { src: getAssetUrl('slides/slide-5.png'), alt: 'Asian Paints Alchemy' },
 ];
 
 export default function SectionArenaChallenges() {

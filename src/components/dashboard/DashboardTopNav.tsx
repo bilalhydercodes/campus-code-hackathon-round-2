@@ -1,6 +1,7 @@
 import React from 'react';
 import { List, SignOut } from 'phosphor-react';
 import { Link } from 'react-router-dom';
+import { getAssetUrl } from '@/lib/utils';
 
 export interface DashboardTopNavProps {
   activeTab: string;
@@ -36,7 +37,7 @@ export default function DashboardTopNav({
         {/* Mobile Logo on ultra small viewports */}
         <Link to="/" className="md:hidden flex items-center pr-1">
           <img
-            src="/campuscode-logo.png"
+            src={getAssetUrl('campuscode-logo.png')}
             alt="CampusCode"
             className="h-[18px] w-auto object-contain"
           />

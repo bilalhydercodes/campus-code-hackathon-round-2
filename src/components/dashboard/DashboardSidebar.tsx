@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { getAssetUrl } from '@/lib/utils';
 import {
   SquaresFour,
   Trophy,
@@ -76,7 +77,7 @@ export default function DashboardSidebar({
         <div className="flex h-[56px] items-center justify-between border-b border-[#111111]/[0.08] px-4">
           <Link to="/" onClick={onCloseMobile} className="flex items-center">
             <img
-              src="/campuscode-logo.png"
+              src={getAssetUrl('campuscode-logo.png')}
               alt="CampusCode"
               className="h-[22px] w-auto object-contain object-left"
             />
@@ -179,7 +180,7 @@ export default function DashboardSidebar({
           <div className="flex h-[40px] items-center justify-center">
             <Link to="/" className="flex items-center justify-center">
               <img
-                src="/campuscode-logo.png"
+                src={getAssetUrl('campuscode-logo.png')}
                 alt="CampusCode"
                 className="h-[18px] w-auto object-contain"
               />
@@ -250,7 +251,7 @@ export default function DashboardSidebar({
         <div className="flex h-[52px] items-center justify-between border-b border-[#111111]/[0.08] px-3.5">
           <Link to="/" className="flex items-center">
             <img
-              src="/campuscode-logo.png"
+              src={getAssetUrl('campuscode-logo.png')}
               alt="CampusCode"
               className="h-[20px] w-auto object-contain object-left"
             />

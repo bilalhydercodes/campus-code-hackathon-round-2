@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, List } from "phosphor-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { getAssetUrl } from "@/lib/utils";
 
 export interface NavigationSection {
   title: string;
@@ -37,7 +38,7 @@ export default function Header({
         {/* Logo */}
         <Link to="/" className="flex items-center z-10">
           <img
-            src="/campuscode-logo.png"
+            src={getAssetUrl('campuscode-logo.png')}
             alt="CampusCode"
             className="h-8 w-auto object-contain object-left"
           />
@@ -85,7 +86,7 @@ export default function Header({
                 <div className="flex flex-col gap-4 mt-6">
                   <div className="pb-3 border-b border-[#EAEAE5]">
                     <img
-                      src="/campuscode-logo.png"
+                      src={getAssetUrl('campuscode-logo.png')}
                       alt="CampusCode"
                       className="h-6 w-auto object-contain"
                     />

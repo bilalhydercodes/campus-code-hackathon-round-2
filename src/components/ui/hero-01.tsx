@@ -4,6 +4,7 @@ import Header from "@/components/ui/hero-01-utils/header";
 import BrandSlider, {
   BrandList,
 } from "@/components/ui/hero-01-utils/brand-slider";
+import { getAssetUrl } from "@/lib/utils";
 
 export default function AgencyHeroSection() {
   const navigationData: NavigationSection[] = [
@@ -32,35 +33,35 @@ export default function AgencyHeroSection() {
 
   const brandList: BrandList[] = [
     {
-      image: "/logos/google.svg",
+      image: getAssetUrl("logos/google.svg"),
       name: "Google",
     },
     {
-      image: "/logos/microsoft.svg",
+      image: getAssetUrl("logos/microsoft.svg"),
       name: "Microsoft",
     },
     {
-      image: "/logos/github.svg",
+      image: getAssetUrl("logos/github.svg"),
       name: "GitHub",
     },
     {
-      image: "/logos/stripe.svg",
+      image: getAssetUrl("logos/stripe.svg"),
       name: "Stripe",
     },
     {
-      image: "/logos/vercel.svg",
+      image: getAssetUrl("logos/vercel.svg"),
       name: "Vercel",
     },
     {
-      image: "/logos/linear.svg",
+      image: getAssetUrl("logos/linear.svg"),
       name: "Linear",
     },
     {
-      image: "/logos/figma.svg",
+      image: getAssetUrl("logos/figma.svg"),
       name: "Figma",
     },
     {
-      image: "/logos/supabase.svg",
+      image: getAssetUrl("logos/supabase.svg"),
       name: "Supabase",
     },
   ];

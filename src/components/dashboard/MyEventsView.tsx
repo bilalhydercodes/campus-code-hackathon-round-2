@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Calendar, X } from 'phosphor-react';
+import { getAssetUrl } from '@/lib/utils';
 
 interface MyEventsViewProps {
   onNavigateTab?: (tab: string) => void;
@@ -19,7 +20,7 @@ const UPCOMING_EVENTS: EventRound[] = [
     title: 'Codex 48 – National-Level Hackathon',
     organizer: 'WeCodeCoders',
     dateRange: '24 Sep 2026 – 20 Oct 2026',
-    logoUrl: '/assets/wecode-logo.png',
+    logoUrl: getAssetUrl('assets/wecode-logo.png'),
     logoBg: 'bg-white',
     rounds: [
       { name: 'Round 1: Online Quiz & Ideation', status: 'Completed', date: '24 Sep – 05 Oct 2026' },
@@ -31,7 +32,7 @@ const UPCOMING_EVENTS: EventRound[] = [
     title: 'Vihaan X: Software Track',
     organizer: 'Delhi Technological University (DTU), New Delhi',
     dateRange: '04 Oct 2026 – 07 Nov 2026',
-    logoUrl: '/assets/vihaan-logo.png',
+    logoUrl: getAssetUrl('assets/vihaan-logo.png'),
     logoBg: 'bg-[#0c0d19]',
     rounds: [
       { name: 'Round 1: Abstract & PPT Submission', status: 'Approved', date: '04 Oct – 18 Oct 2026' },
@@ -276,7 +277,7 @@ export default function MyEventsView({ onNavigateTab }: MyEventsViewProps) {
             className="group relative cursor-pointer overflow-hidden rounded-2xl border border-[#7665FF]/20 shadow-xs transition-transform hover:scale-[1.01]"
           >
             <img
-              src="/assets/rebuild-banner-full.png"
+              src={getAssetUrl('assets/rebuild-banner-full.png')}
               alt="REBUILD '26 Challenge"
               className="h-auto w-full rounded-2xl object-cover"
             />

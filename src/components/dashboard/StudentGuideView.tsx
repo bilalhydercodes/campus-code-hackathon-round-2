@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { cn, getAssetUrl } from "@/lib/utils";
 import { 
   Bookmark, 
   ChevronRight, 
@@ -265,7 +265,7 @@ export function StudentGuideBook() {
               }}
             >
               <img
-                src="/assets/student-playbook-cover.jpg"
+                src={getAssetUrl('assets/student-playbook-cover.jpg')}
                 alt="CampusCode Student Playbook - Click to Open"
                 className="w-full h-full object-cover block select-none"
                 width={380}

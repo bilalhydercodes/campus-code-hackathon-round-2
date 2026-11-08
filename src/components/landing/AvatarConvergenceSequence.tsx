@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useCallback } from 'react';
+import { getAssetUrl } from '@/lib/utils';
 
 interface AvatarItem {
   id: number;
@@ -25,7 +26,7 @@ const AVATARS: AvatarItem[] = [
     id: 1,
     name: 'Avatar 1',
     role: '',
-    src: '/avatars/avatar-1.jpg',
+    src: getAssetUrl('avatars/avatar-1.jpg'),
     scatterX: -160,
     scatterY: 85,
     startScale: 1.25,
@@ -39,7 +40,7 @@ const AVATARS: AvatarItem[] = [
     id: 2,
     name: 'Avatar 2',
     role: '',
-    src: '/avatars/avatar-2.jpg',
+    src: getAssetUrl('avatars/avatar-2.jpg'),
     scatterX: 165,
     scatterY: -80,
     startScale: 1.22,
@@ -53,7 +54,7 @@ const AVATARS: AvatarItem[] = [
     id: 3,
     name: 'Avatar 3',
     role: '',
-    src: '/avatars/avatar-3.jpg',
+    src: getAssetUrl('avatars/avatar-3.jpg'),
     scatterX: -140,
     scatterY: -75,
     startScale: 1.15,
@@ -67,7 +68,7 @@ const AVATARS: AvatarItem[] = [
     id: 4,
     name: 'Avatar 4',
     role: '',
-    src: '/avatars/avatar-4.jpg',
+    src: getAssetUrl('avatars/avatar-4.jpg'),
     scatterX: 145,
     scatterY: 75,
     startScale: 1.12,
@@ -81,7 +82,7 @@ const AVATARS: AvatarItem[] = [
     id: 5,
     name: 'Avatar 5',
     role: '',
-    src: '/avatars/avatar-5.jpg',
+    src: getAssetUrl('avatars/avatar-5.jpg'),
     scatterX: -65,
     scatterY: -110,
     startScale: 0.94,
@@ -95,7 +96,7 @@ const AVATARS: AvatarItem[] = [
     id: 6,
     name: 'Avatar 6',
     role: '',
-    src: '/avatars/avatar-6.jpg',
+    src: getAssetUrl('avatars/avatar-6.jpg'),
     scatterX: 70,
     scatterY: -105,
     startScale: 0.94,
@@ -109,7 +110,7 @@ const AVATARS: AvatarItem[] = [
     id: 7,
     name: 'Avatar 7',
     role: '',
-    src: '/avatars/avatar-7.jpg',
+    src: getAssetUrl('avatars/avatar-7.jpg'),
     scatterX: 0,
     scatterY: 110,
     startScale: 1.08,

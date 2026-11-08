@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, type CSSProperties, type FormEvent, type PointerEvent, type ReactNode } from "react";
+import { getAssetUrl } from "@/lib/utils";
 
 export type FooterLink = { label: string; href: string };
 export type FooterColumn = { title: string; links: FooterLink[] };
@@ -105,7 +106,7 @@ export default function DitheredFooter({
     tagline = "Where student builders learn, compete & ship.",
     logo = (
         <img
-            src="/campuscode-logo.png"
+            src={getAssetUrl('campuscode-logo.png')}
             alt="CampusCode"
             className="h-8 w-auto object-contain object-left dark:brightness-110"
         />
