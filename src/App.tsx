@@ -11,7 +11,7 @@ import StudentGuidePage from './pages/StudentGuidePage';
 export default function App() {
   return (
     <IconContext.Provider value={{ size: 25 }}>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
