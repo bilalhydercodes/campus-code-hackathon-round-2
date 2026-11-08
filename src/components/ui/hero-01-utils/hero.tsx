@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "phosphor-react";
+import StarBorder from "@/components/ui/StarBorder";
 
 export interface AvatarList {
   image: string;
@@ -65,17 +66,32 @@ export default function HeroSection({
           {description}
         </p>
 
-        {/* Centered Primary CTA Button */}
+        {/* Centered Primary CTA Button with StarBorder effect */}
         <div className="mt-8 sm:mt-10 flex items-center justify-center">
-          <Link
+          <StarBorder
+            as={Link}
             to={primaryCtaHref}
-            className="group inline-flex items-center gap-3 rounded-full bg-[#111111] px-6 sm:px-7 py-3 sm:py-3.5 font-inter text-[14px] sm:text-[15px] font-medium text-white transition-all hover:bg-[#252525] hover:shadow-md active:scale-95"
+            color="#ffffff"
+            trailColor="#ffffff"
+            duration={4}
+            direction="clockwise"
+            stars={1}
+            trailLength={0.3}
+            thickness={1}
+            radius={28}
+            glow={0.6}
+            hover="lap"
+            sparkle={false}
+            clickPulse
+            theme="dark"
+            backgroundColor="#111111"
+            className="group inline-flex items-center gap-3 px-6 sm:px-7 py-3 sm:py-3.5 font-inter text-[14px] sm:text-[15px] font-medium text-white transition-all hover:shadow-md active:scale-95"
           >
             <span>{primaryCtaText}</span>
             <div className="flex h-6 w-6 items-center justify-center rounded-full bg-white/20 text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
               <ArrowUpRight size={18} className="w-[18px] h-[18px]" />
             </div>
-          </Link>
+          </StarBorder>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, List } from "phosphor-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import StarBorder from "@/components/ui/StarBorder";
 import { getAssetUrl } from "@/lib/utils";
 
 export interface NavigationSection {
@@ -68,12 +69,28 @@ export default function Header({
 
         {/* Right side spacer / Mobile Sheet Trigger */}
         <div className="flex items-center justify-end gap-2 sm:gap-3 min-w-[32px] sm:min-w-[120px]">
-          <Link
+          <StarBorder
+            as={Link}
             to="/login"
-            className="inline-flex items-center gap-1.5 rounded-full border border-[#DEDED8] bg-white px-3 sm:px-4 py-1.5 font-inter text-[12px] sm:text-[13px] font-semibold text-[#111111] transition-all hover:bg-[#F2F2EE] hover:border-[#111111]/30 shadow-xs"
+            color="#ffffff"
+            trailColor="#ffffff"
+            duration={4}
+            direction="clockwise"
+            stars={1}
+            trailLength={0.3}
+            thickness={1}
+            radius={20}
+            glow={0.6}
+            hover="lap"
+            sparkle={false}
+            clickPulse
+            theme="dark"
+            backgroundColor="#111111"
+            className="inline-flex h-[36px] items-center justify-center gap-1.5 px-4 font-inter text-[12px] sm:text-[13px] font-semibold text-white transition-all hover:shadow-md active:scale-95"
           >
             Sign In
-          </Link>
+          </StarBorder>
+
           {/* Mobile Sheet Trigger */}
           <div className="md:hidden">
             <Sheet open={open} onOpenChange={setOpen}>
@@ -111,21 +128,51 @@ export default function Header({
                     );
                   })}
                   <div className="pt-4 border-t border-[#EAEAE5] flex flex-col gap-2.5">
-                    <Link
+                    <StarBorder
+                      as={Link}
                       to="/login"
                       onClick={() => setOpen(false)}
-                      className="inline-flex items-center justify-center gap-2 rounded-full border border-[#DEDED8] bg-white px-5 py-2.5 font-inter text-sm font-semibold text-[#111111] shadow-xs hover:bg-[#F2F2EE]"
+                      color="#ffffff"
+                      trailColor="#ffffff"
+                      duration={4}
+                      direction="clockwise"
+                      stars={1}
+                      trailLength={0.3}
+                      thickness={1}
+                      radius={20}
+                      glow={0.6}
+                      hover="lap"
+                      sparkle={false}
+                      clickPulse
+                      theme="dark"
+                      backgroundColor="#111111"
+                      className="inline-flex h-[42px] items-center justify-center gap-2 font-inter text-sm font-semibold text-white shadow-xs hover:shadow-md"
                     >
                       Sign In
-                    </Link>
-                    <Link
+                    </StarBorder>
+                    <StarBorder
+                      as={Link}
                       to="/login"
                       onClick={() => setOpen(false)}
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-[#111111] px-5 py-2.5 font-inter text-sm font-medium text-white shadow-xs hover:bg-[#252525]"
+                      color="#ffffff"
+                      trailColor="#ffffff"
+                      duration={4}
+                      direction="clockwise"
+                      stars={1}
+                      trailLength={0.3}
+                      thickness={1}
+                      radius={20}
+                      glow={0.6}
+                      hover="lap"
+                      sparkle={false}
+                      clickPulse
+                      theme="dark"
+                      backgroundColor="#111111"
+                      className="inline-flex h-[42px] items-center justify-center gap-2 font-inter text-sm font-medium text-white shadow-xs hover:shadow-md"
                     >
                       <span>Explore Hackathons</span>
                       <ArrowUpRight size={16} className="w-4 h-4" />
-                    </Link>
+                    </StarBorder>
                   </div>
                 </div>
               </SheetContent>
